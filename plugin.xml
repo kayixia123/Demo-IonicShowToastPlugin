@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.jamingx.showtoastplugin" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ShowToastPlugin</name>
+    <js-module name="ShowToastPlugin" src="www/ShowToastPlugin.js">
+        <clobbers target="cordova.plugins.ShowToastPlugin" />
+    </js-module>
+	
+	<platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="ShowToastPlugin">
+        <param name="android-package" value="com.jamingx.ionicshowtoastplugin.ShowToastPlugin"/>
+      </feature>
+    </config-file>
+ 
+    <source-file src="src/android/ShowToastPlugin.java" target-dir="src/com/jamingx/ionicshowtoastplugin/ShowToastPlugin"/>
+
+  </platform>
+	
+</plugin>
